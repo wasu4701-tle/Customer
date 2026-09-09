@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Projecttitle.Data;
+using Projecttitle.Models;
+using Projecttitle.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +14,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
- builder.Services.AddDbContext<MyApplicationDbContext>(opt =>
-         opt.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version())));
+ builder.Services.AddDbContext<ApplicationDbContext>(opt =>
+         opt.UseMySql(builder.Configuration.GetConnectionString("HosConnection"), new MySqlServerVersion(new Version())));
+
+
+builder.Services.AddScoped<CustomerService>();
 
 var app = builder.Build();
 

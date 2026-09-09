@@ -122,3 +122,4 @@ C:\Users\tee\Projecttitle\bin\Debug\net9.0\Projecttitle.runtimeconfig.json
 C:\Users\tee\Projecttitle\bin\Debug\net9.0\Projecttitle.pdb
 C:\Users\tee\Projecttitle\obj\Debug\net9.0\Projecttitle.genruntimeconfig.cache
 C:\Users\tee\Projecttitle\obj\Debug\net9.0\ref\Projecttitle.dll
+C:\Users\tee\Projecttitle\obj\Debug\net9.0\Projecttitle.sourcelink.json

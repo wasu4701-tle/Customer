@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace Projecttitle.Models;
 
@@ -75,6 +76,7 @@ public partial class Patient
 
     public string? Truebirthday { get; set; }
 
+    [JsonPropertyName("workAddr")]
     public string? Workaddr { get; set; }
 
     public string? Worktel { get; set; }
@@ -157,6 +159,8 @@ public partial class Patient
 
     public string? AddrSoi { get; set; }
 
+
+    [JsonPropertyName("workAddr1")]
     public string? WorkAddr { get; set; }
 
     public string? FatherHn { get; set; }
