@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Projecttitle.Data;
 using Projecttitle.Models;
 
 namespace Projecttitle.Services;
@@ -12,10 +13,13 @@ public interface ICustomerService
 public class CustomerService : ICustomerService
 {
     private readonly ApplicationDbContext _context;
+    private readonly MyApplicationDbContext _mycontext;
 
-    public CustomerService(ApplicationDbContext context)
+   
+    public CustomerService(ApplicationDbContext context,MyApplicationDbContext mycontext)
     {
         _context = context;
+        _mycontext = mycontext;
     }
     
     public async Task<Patient[]> GetPatientAsync()
